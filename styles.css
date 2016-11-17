@@ -2,7 +2,8 @@
  * Thomas Marchi
  * Built to highlight everything in JS with JSX syntax
  * Paste this into your sytle sheet for Atom with any theme.
- * Make sure to have JS with JSX syntax 
+ * Make sure to have JS with JSX syntax
+ * Make sure to have HTML with Mustache syntax
  */
 // style the background color of the tree view
 
@@ -18,7 +19,11 @@
 	cursor: pointer;
 	transition: all 0.62s;
 }
-
+.title{
+	text-shadow: 0 1px 1px rgba(0,0,0,0.9);
+	font-weight: bold;
+	text-transform:uppercase;
+}
 .header .icon::before{
 	display: none !important;
 }
@@ -115,9 +120,9 @@ atom-text-editor {
 	font-size: 15px;
 }
 // To style other content in the text editor's shadow DOM, use the ::shadow expression
-
-atom-text-editor .cursor {
-	border-color: red;
+atom-text-editor .selection .region {
+  background-color: rgba(101, 31, 255,0.4);
+  color:#fff !important;
 }
 
 .file.entry.list-item.status-ignored span[title=".DS_Store"] {
@@ -524,4 +529,22 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 .list-tree li.list-nested-item > .list-item,
 .list-tree li:not(.list-nested-item) {
 	color: #E0E0E0;
+}
+
+//html
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--html{
+	color: #64FFDA;
+}
+.syntax--punctuation.syntax--definition.syntax--block.syntax--mustache{
+	color: #FFA726;
+}
+.syntax--entity.syntax--name.syntax--function.syntax--mustache{
+	color: #9CCC65;
+}
+.syntax--entity.syntax--name.syntax--tag.syntax--mustache{
+    color: #ff1744;
+}
+.syntax--string.syntax--quoted.syntax--double.syntax--html,
+.syntax--string.syntax--quoted.syntax--single.syntax--html{
+	color:#B388FF;
 }
