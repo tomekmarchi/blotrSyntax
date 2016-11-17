@@ -1,40 +1,111 @@
 /*
- * Your Stylesheet
- *
- * This stylesheet is loaded when Atom starts up and is reloaded automatically
- * when it is changed and saved.
- *
- * Add your own CSS or Less to fully customize Atom.
- * If you are unfamiliar with Less, you can read more about it here:
- * http://lesscss.org
- */
-/*
- * Examples
- * (To see them, uncomment and save)
+ * Thomas Marchi
+ * Built to highlight everything in JS with JSX syntax
+ * Paste this into your sytle sheet for Atom with any theme.
+ * Make sure to have JS with JSX syntax 
  */
 // style the background color of the tree view
+
 .tree-view {
 	background-color: #212121;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.9);
 	color: #ECEFF1;
 	padding-left: 10px;
 	padding-right: 10px;
+	transition: all 0.62s;
 }
-
-.file.entry.list-item.status-ignored{
-	display:none;
-}
-
-.header.list-item.project-root-header {
+.list-item{
 	cursor: pointer;
-	padding-left: 14px;
-	font-weight:bolder;
-	text-transform: uppercase;
-	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-	background-color: #5C6BC0;
-	color: #fff;
+	transition: all 0.62s;
+}
+
+.header .icon::before{
+	display: none !important;
+}
+
+.tree-view .project-root.project-root:first-child{
+	margin-top: 10px;
+}
+.tree-view .project-root.project-root:first-child,
+.tree-view .project-root.project-root {
+    padding: 0;
+}
+.tree-view .project-root.project-root {
+	background-color: rgba(0,0,0,0.2);
 	margin-bottom: 10px;
+	border-radius: 0 0 3px 3px;
+}
+.list-group li:not(.list-nested-item).status-modified, .list-tree li:not(.list-nested-item).status-modified, .list-group li.list-nested-item.status-modified > .list-item, .list-tree li.list-nested-item.status-modified > .list-item{
+	color: #90CAF9;
+}
+
+.list-group li:not(.list-nested-item).selected.status-modified, .list-tree li:not(.list-nested-item).selected.status-modified, .list-group li.list-nested-item.selected.status-modified > .list-item, .list-tree li.list-nested-item.selected.status-modified > .list-item {
+    color: #e53935;
+}
+
+.list-item:hover{
+	background-color: #424242;
+	color:#fff !important;
 	border-radius: 3px;
+}
+
+atom-text-editor .lines {
+	padding-left: 5px;
+}
+
+.tab-bar .tab {
+	cursor: pointer;
+}
+
+atom-pane-container {
+	padding-top: 0;
+}
+
+.syntax--variable.syntax--language.syntax--this.syntax--es{
+	color: #f44336;
+	font-weight: bold;
+}
+
+atom-text-editor .line-number .icon-right {
+	display: none;
+}
+
+atom-text-editor .line-number {
+	position: relative;
+	white-space: nowrap;
+	padding-left: 10px;
+	padding-right: 10px;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.tab-bar .tab .close-icon,
+.tab-bar .tab .close-icon::before {
+	cursor: pointer;
+	transition: all 0.62s;
+}
+
+.tab-bar .tab .close-icon {
+	border-radius: 50%;
+	transition: all 0.62s;
+}
+
+.tab-bar .tab::before {
+	box-shadow: none;
+	height: 3px;
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	z-index: 2;
+	top: auto;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	border-radius: 0 !important;
+	background: #651FFF;
+	opacity: 0;
+	transition: opacity 0.56s;
+	cursor: pointer;
 }
 // style the background and foreground colors on the atom-text-editor-element itself
 atom-text-editor {
@@ -44,8 +115,25 @@ atom-text-editor {
 	font-size: 15px;
 }
 // To style other content in the text editor's shadow DOM, use the ::shadow expression
+
 atom-text-editor .cursor {
 	border-color: red;
+}
+
+.file.entry.list-item.status-ignored span[title=".DS_Store"] {
+	display: none;
+}
+
+.header.list-item.project-root-header {
+	cursor: pointer;
+	padding-left: 14px;
+	font-weight: bolder;
+	text-transform: uppercase;
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+	background-color: #5C6BC0;
+	color: #fff;
+	margin-bottom: 10px;
+	border-radius: 3px;
 }
 
 .syntax--keyword.syntax--operator.syntax--assignment.syntax--js {
@@ -53,8 +141,7 @@ atom-text-editor .cursor {
 }
 
 .syntax--keyword.syntax--operator.syntax--relational.syntax--js {
-	color: #651FFF;
-	font-weight: bold;
+	color: #FFEB3B;
 }
 
 .syntax--storage.syntax--type.syntax--js {
@@ -69,6 +156,12 @@ atom-text-editor .cursor {
 	color: #B388FF;
 }
 
+.syntax--punctuation.syntax--definition.syntax--string.syntax--js{
+	color:#f44336;
+}
+.syntax--string{
+	color:#ffcdd2;
+}
 .syntax--variable.syntax--other.syntax--property.syntax--js {
 	color: #F48FB1;
 }
@@ -77,16 +170,19 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 	color: #C5E1A5;
 }
 
+.syntax--variable.syntax--parameter.syntax--function.syntax--es,
 .syntax--variable.syntax--other.syntax--readwrite.syntax--js {
-	color: #03A9F4;
+	color: #80CBC4;
 }
 
 .syntax--meta.syntax--arguments.syntax--js {
-	color: #F48FB1;
+	color: #00B0FF;
 }
-
+.syntax--keyword.syntax--control.syntax--def.syntax--es{
+	color: #FF5722;
+}
 .syntax--keyword.syntax--control {
-	color: #B388FF;
+	color: #FF9800;
 }
 
 .syntax--support.syntax--function,
@@ -122,7 +218,7 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 }
 
 .syntax--string.syntax--unquoted.syntax--js-label.syntax--js {
-	color: #FFB74D;
+	color: #64B5F6;
 }
 
 .syntax--punctuation.syntax--definition.syntax--function.syntax--body.syntax--begin.syntax--bracket.syntax--curly.syntax--js {
@@ -141,8 +237,9 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 	color: #90CAF9;
 }
 
+.syntax--punctuation.syntax--separator.syntax--key-value.syntax--js,
 .syntax--constant {
-	color: #F4511E;
+	color: #FFA726;
 }
 
 .syntax--punctuation.syntax--definition.function-parameters,
@@ -151,7 +248,7 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 .syntax--punctuation.syntax--definition.syntax--parameters,
 .syntax--punctuation.syntax--definition.syntax--separator,
 .syntax--punctuation.syntax--definition.syntax--seperator {
-	color: #7C4DFF;
+	color: #BA68C8;
 }
 
 .atom-text-editor .syntax--meta.syntax--brace.syntax--curly.syntax--js {
