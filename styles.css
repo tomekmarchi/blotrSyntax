@@ -1,0 +1,430 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+// style the background color of the tree view
+.tree-view {
+	background-color: #212121;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.9);
+	color: #ECEFF1;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.file.entry.list-item.status-ignored{
+	display:none;
+}
+
+.header.list-item.project-root-header {
+	cursor: pointer;
+	padding-left: 14px;
+	font-weight:bolder;
+	text-transform: uppercase;
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+	background-color: #5C6BC0;
+	color: #fff;
+	margin-bottom: 10px;
+	border-radius: 3px;
+}
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+	color: #FAFAFA;
+	background-color: #212121;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.9);
+	font-size: 15px;
+}
+// To style other content in the text editor's shadow DOM, use the ::shadow expression
+atom-text-editor .cursor {
+	border-color: red;
+}
+
+.syntax--keyword.syntax--operator.syntax--assignment.syntax--js {
+	color: #AED581;
+}
+
+.syntax--keyword.syntax--operator.syntax--relational.syntax--js {
+	color: #651FFF;
+	font-weight: bold;
+}
+
+.syntax--storage.syntax--type.syntax--js {
+	color: #1DE9B6;
+}
+
+.syntax--keyword.syntax--operator.syntax--new.syntax--es {
+	color: #FFEB3B;
+}
+
+.syntax--variable.syntax--other.syntax--object.syntax--js {
+	color: #B388FF;
+}
+
+.syntax--variable.syntax--other.syntax--property.syntax--js {
+	color: #F48FB1;
+}
+
+span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variable.syntax--other.syntax--readwrite.syntax--js {
+	color: #C5E1A5;
+}
+
+.syntax--variable.syntax--other.syntax--readwrite.syntax--js {
+	color: #03A9F4;
+}
+
+.syntax--meta.syntax--arguments.syntax--js {
+	color: #F48FB1;
+}
+
+.syntax--keyword.syntax--control {
+	color: #B388FF;
+}
+
+.syntax--support.syntax--function,
+.syntax--support.syntax--function.syntax--js {
+	color: #18FFFF;
+}
+
+.syntax--punctuation.syntax--terminator.syntax--statement.syntax--js {
+	color: #FF6E40;
+}
+
+.syntax--punctuation.syntax--definition.syntax--function.syntax--begin.syntax--es:not(.syntax--parameters),
+.syntax--punctuation.syntax--section.syntax--group.syntax--begin.syntax--es {
+	color: #ff8a80;
+}
+
+.syntax--punctuation.syntax--definition.syntax--function.syntax--end.syntax--es:not(.syntax--parameters),
+.syntax--punctuation.syntax--section.syntax--group.syntax--end.syntax--es {
+	color: #ff8a80;
+}
+
+.syntax--meta.syntax--brace.syntax--round.syntax--js:not(.syntax--arguments),
+.syntax--punctuation.syntax--definition.syntax--arguments.syntax--begin.syntax--bracket.syntax--round.syntax--js {
+	color: #BA68C8;
+}
+
+.syntax--punctuation.syntax--definition.syntax--arguments.syntax--end.syntax--bracket.syntax--round.syntax--js {
+	color: #8E24AA;
+}
+
+.syntax--meta.syntax--brace.syntax--square.syntax--js {
+	color: #4CAF50;
+}
+
+.syntax--string.syntax--unquoted.syntax--js-label.syntax--js {
+	color: #FFB74D;
+}
+
+.syntax--punctuation.syntax--definition.syntax--function.syntax--body.syntax--begin.syntax--bracket.syntax--curly.syntax--js {
+	color: #FF4081;
+}
+
+.syntax--entity.syntax--name.syntax--function {
+	color: #FF4081;
+}
+
+.syntax--variable.syntax--parameter {
+	color: #00B0FF;
+}
+
+.syntax--variable {
+	color: #90CAF9;
+}
+
+.syntax--constant {
+	color: #F4511E;
+}
+
+.syntax--punctuation.syntax--definition.function-parameters,
+.syntax--punctuation.syntax--definition.syntax--array,
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator {
+	color: #7C4DFF;
+}
+
+.atom-text-editor .syntax--meta.syntax--brace.syntax--curly.syntax--js {
+	color: #F5F5F5 !important;
+}
+
+.list-group li.list-nested-item.status-ignored > .list-item,
+.list-group li:not(.list-nested-item).status-ignored,
+.list-tree li.list-nested-item.status-ignored > .list-item,
+.list-tree li:not(.list-nested-item).status-ignored {
+	color: #F5F5F5;
+}
+
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$="GULPFILE.js"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$="Gulpfile.js"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$="gulpfile.js"]:before,
+.icon-file-binary[data-name$="GULPFILE.js"]:before,
+.icon-file-binary[data-name$="Gulpfile.js"]:before,
+.icon-file-binary[data-name$="gulpfile.js"]:before,
+.icon-file-text[data-name$="GULPFILE.js"]:before,
+.icon-file-text[data-name$="Gulpfile.js"]:before,
+.icon-file-text[data-name$="gulpfile.js"]:before,
+.theme-flatland-dark-ui .icon-book[data-name$="GULPFILE.js"]:before,
+.theme-flatland-dark-ui .icon-book[data-name$="Gulpfile.js"]:before,
+.theme-flatland-dark-ui .icon-book[data-name$="gulpfile.js"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name$="GULPFILE.js"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name$="Gulpfile.js"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name$="gulpfile.js"]:before {
+	color: #f44336;
+}
+
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name=".npmignore"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name=".npmrc"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="npm-debug.log"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="npm-shrinkwrap.json"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="npmrc"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="package.json"]:before,
+.icon-file-binary[data-name=".npmignore"]:before,
+.icon-file-binary[data-name=".npmrc"]:before,
+.icon-file-binary[data-name="npm-debug.log"]:before,
+.icon-file-binary[data-name="npm-shrinkwrap.json"]:before,
+.icon-file-binary[data-name="npmrc"]:before,
+.icon-file-binary[data-name="package.json"]:before,
+.icon-file-text[data-name=".npmignore"]:before,
+.icon-file-text[data-name=".npmrc"]:before,
+.icon-file-text[data-name="npm-debug.log"]:before,
+.icon-file-text[data-name="npm-shrinkwrap.json"]:before,
+.icon-file-text[data-name="npmrc"]:before,
+.icon-file-text[data-name="package.json"]:before,
+.theme-flatland-dark-ui .icon-book[data-name=".npmignore"]:before,
+.theme-flatland-dark-ui .icon-book[data-name=".npmrc"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="npm-debug.log"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="npm-shrinkwrap.json"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="npmrc"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="package.json"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name=".npmignore"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name=".npmrc"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="npm-debug.log"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="npm-shrinkwrap.json"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="npmrc"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="package.json"]:before {
+	color: #b71c1c;
+}
+
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".gitattributes"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".gitconfig"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".gitignore"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".gitignore_global"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".gitkeep"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".gitmodules"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".keep"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name=".mailmap"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name^=".git"]:before,
+.icon-file-binary[data-name$=".gitattributes"]:before,
+.icon-file-binary[data-name$=".gitconfig"]:before,
+.icon-file-binary[data-name$=".gitignore"]:before,
+.icon-file-binary[data-name$=".gitignore_global"]:before,
+.icon-file-binary[data-name$=".gitkeep"]:before,
+.icon-file-binary[data-name$=".gitmodules"]:before,
+.icon-file-binary[data-name$=".keep"]:before,
+.icon-file-binary[data-name=".mailmap"]:before,
+.icon-file-binary[data-name^=".git"]:before,
+.icon-file-text[data-name$=".gitattributes"]:before,
+.icon-file-text[data-name$=".gitconfig"]:before,
+.icon-file-text[data-name$=".gitignore"]:before,
+.icon-file-text[data-name$=".gitignore_global"]:before,
+.icon-file-text[data-name$=".gitkeep"]:before,
+.icon-file-text[data-name$=".gitmodules"]:before,
+.icon-file-text[data-name$=".keep"]:before,
+.icon-file-text[data-name=".mailmap"]:before,
+.icon-file-text[data-name^=".git"]:before,
+.theme-flatland-dark-ui .icon-book[data-name$=".gitattributes"]:before,
+.theme-flatland-dark-ui .icon-book[data-name$=".gitconfig"]:before,
+.theme-flatland-dark-ui .icon-book[data-name$=".gitignore"]:before,
+.theme-flatland-dark-ui .icon-book[data-name$=".gitignore_global"]:before,
+.theme-flatland-dark-ui .icon-book[data-name$=".gitkeep"]:before,
+.theme-flatland-dark-ui .icon-book[data-name$=".gitmodules"]:before,
+.theme-flatland-dark-ui .icon-book[data-name$=".keep"]:before,
+.theme-flatland-dark-ui .icon-book[data-name=".mailmap"]:before,
+.theme-flatland-dark-ui .icon-book[data-name^=".git"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name$=".gitattributes"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name$=".gitconfig"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name$=".gitignore"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name$=".gitignore_global"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name$=".gitkeep"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name$=".gitmodules"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name$=".keep"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name=".mailmap"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name^=".git"]:before {
+	color: #d32f2f;
+}
+
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".1ST"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".1st"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".README"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".ReadMe"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".readme"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="AUTHORS"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="CHANGELOG"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="CONTRIBUTING"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="CONTRIBUTORS"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="COPYING"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="ChangeLog"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="Contributors"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="HISTORY"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="INSTALL"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="LICENCE"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="LICENCES"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="LICENSE"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="LICENSES"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="MIT-LICENSE"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="NEWS"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="PROJECTS"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="README.md"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="Read.me"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="Readme.md"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="THANKS"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="changelog"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="read.me"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="readme.md"]:before,
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name^="ChangeLog."]:before,
+.icon-file-binary[data-name$=".1ST"]:before,
+.icon-file-binary[data-name$=".1st"]:before,
+.icon-file-binary[data-name$=".README"]:before,
+.icon-file-binary[data-name$=".ReadMe"]:before,
+.icon-file-binary[data-name$=".readme"]:before,
+.icon-file-binary[data-name="AUTHORS"]:before,
+.icon-file-binary[data-name="CHANGELOG"]:before,
+.icon-file-binary[data-name="CONTRIBUTING"]:before,
+.icon-file-binary[data-name="CONTRIBUTORS"]:before,
+.icon-file-binary[data-name="COPYING"]:before,
+.icon-file-binary[data-name="ChangeLog"]:before,
+.icon-file-binary[data-name="Contributors"]:before,
+.icon-file-binary[data-name="HISTORY"]:before,
+.icon-file-binary[data-name="INSTALL"]:before,
+.icon-file-binary[data-name="LICENCE"]:before,
+.icon-file-binary[data-name="LICENCES"]:before,
+.icon-file-binary[data-name="LICENSE"]:before,
+.icon-file-binary[data-name="LICENSES"]:before,
+.icon-file-binary[data-name="MIT-LICENSE"]:before,
+.icon-file-binary[data-name="NEWS"]:before,
+.icon-file-binary[data-name="PROJECTS"]:before,
+.icon-file-binary[data-name="README.md"]:before,
+.icon-file-binary[data-name="Read.me"]:before,
+.icon-file-binary[data-name="Readme.md"]:before,
+.icon-file-binary[data-name="THANKS"]:before,
+.icon-file-binary[data-name="changelog"]:before,
+.icon-file-binary[data-name="read.me"]:before,
+.icon-file-binary[data-name="readme.md"]:before,
+.icon-file-binary[data-name^="ChangeLog."]:before,
+.icon-file-text[data-name$=".1ST"]:before,
+.icon-file-text[data-name$=".1st"]:before,
+.icon-file-text[data-name$=".README"]:before,
+.icon-file-text[data-name$=".ReadMe"]:before,
+.icon-file-text[data-name$=".readme"]:before,
+.icon-file-text[data-name="AUTHORS"]:before,
+.icon-file-text[data-name="CHANGELOG"]:before,
+.icon-file-text[data-name="CONTRIBUTING"]:before,
+.icon-file-text[data-name="CONTRIBUTORS"]:before,
+.icon-file-text[data-name="COPYING"]:before,
+.icon-file-text[data-name="ChangeLog"]:before,
+.icon-file-text[data-name="Contributors"]:before,
+.icon-file-text[data-name="HISTORY"]:before,
+.icon-file-text[data-name="INSTALL"]:before,
+.icon-file-text[data-name="LICENCE"]:before,
+.icon-file-text[data-name="LICENCES"]:before,
+.icon-file-text[data-name="LICENSE"]:before,
+.icon-file-text[data-name="LICENSES"]:before,
+.icon-file-text[data-name="MIT-LICENSE"]:before,
+.icon-file-text[data-name="NEWS"]:before,
+.icon-file-text[data-name="PROJECTS"]:before,
+.icon-file-text[data-name="README.md"]:before,
+.icon-file-text[data-name="Read.me"]:before,
+.icon-file-text[data-name="Readme.md"]:before,
+.icon-file-text[data-name="THANKS"]:before,
+.icon-file-text[data-name="changelog"]:before,
+.icon-file-text[data-name="read.me"]:before,
+.icon-file-text[data-name="readme.md"]:before,
+.icon-file-text[data-name^="ChangeLog."]:before,
+.theme-flatland-dark-ui .icon-book[data-name$=".1ST"]:before,
+.theme-flatland-dark-ui .icon-book[data-name$=".1st"]:before,
+.theme-flatland-dark-ui .icon-book[data-name$=".README"]:before,
+.theme-flatland-dark-ui .icon-book[data-name$=".ReadMe"]:before,
+.theme-flatland-dark-ui .icon-book[data-name$=".readme"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="AUTHORS"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="CHANGELOG"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="CONTRIBUTING"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="CONTRIBUTORS"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="COPYING"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="ChangeLog"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="Contributors"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="HISTORY"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="INSTALL"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="LICENCE"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="LICENCES"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="LICENSE"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="LICENSES"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="MIT-LICENSE"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="NEWS"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="PROJECTS"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="README.md"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="Read.me"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="Readme.md"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="THANKS"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="changelog"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="read.me"]:before,
+.theme-flatland-dark-ui .icon-book[data-name="readme.md"]:before,
+.theme-flatland-dark-ui .icon-book[data-name^="ChangeLog."]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name$=".1ST"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name$=".1st"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name$=".README"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name$=".ReadMe"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name$=".readme"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="AUTHORS"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="CHANGELOG"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="CONTRIBUTING"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="CONTRIBUTORS"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="COPYING"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="ChangeLog"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="Contributors"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="HISTORY"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="INSTALL"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="LICENCE"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="LICENCES"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="LICENSE"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="LICENSES"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="MIT-LICENSE"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="NEWS"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="PROJECTS"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="README.md"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="Read.me"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="Readme.md"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="THANKS"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="changelog"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="read.me"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name="readme.md"]:before,
+.theme-flatland-dark-ui .icon-file-text[data-name^="ChangeLog."]:before {
+	color: #80D8FF;
+}
+
+.icon-book[data-name="README.md"]:before,
+.icon-book[data-name="Readme.md"]:before,
+.icon-book[data-name="readme.md"]:before {
+	color: #40C4FF;
+}
+
+.icon-file-directory[data-name="node_modules"]:before {
+	color: #76FF03;
+}
+
+.list-group li.list-nested-item > .list-item,
+.list-group li:not(.list-nested-item),
+.list-tree li.list-nested-item > .list-item,
+.list-tree li:not(.list-nested-item) {
+	color: #E0E0E0;
+}
