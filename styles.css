@@ -4,9 +4,10 @@
  * Paste this into your sytle sheet for Atom with any theme.
  * Make sure to have JS with JSX syntax
  * Make sure to have HTML with Mustache syntax
+ * Atom > Settings > Themes > (Click)  "your stylesheet" -> Paste All of this.
  */
-// style the background color of the tree view
 
+// style the background color of the tree view
 .tree-view {
 	background-color: #212121;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.9);
@@ -145,6 +146,7 @@ atom-text-editor .selection .region {
 	color: #AED581;
 }
 
+.syntax--keyword.syntax--operator.syntax--comparison.syntax--js,
 .syntax--keyword.syntax--operator.syntax--relational.syntax--js {
 	color: #FFEB3B;
 }
@@ -160,7 +162,12 @@ atom-text-editor .selection .region {
 .syntax--variable.syntax--other.syntax--object.syntax--js {
 	color: #B388FF;
 }
-
+.syntax--punctuation.syntax--section.syntax--embedded.syntax--es6{
+	color:#d50000;
+}
+.syntax--punctuation.syntax--definition.syntax--string.syntax--es6{
+	color:#DD2C00;
+}
 .syntax--punctuation.syntax--definition.syntax--string.syntax--js{
 	color:#f44336;
 }
@@ -175,8 +182,11 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 	color: #C5E1A5;
 }
 
-.syntax--variable.syntax--parameter.syntax--function.syntax--es,
-.syntax--variable.syntax--other.syntax--readwrite.syntax--js {
+.syntax--variable.syntax--other.syntax--readwrite.syntax--js{
+	color: #4FC3F7;
+}
+
+.syntax--variable.syntax--parameter.syntax--function.syntax--es {
 	color: #80CBC4;
 }
 
