@@ -1,14 +1,13 @@
 /*
- * Thomas Marchi
- * Built to highlight everything in JS with JSX syntax
- * Paste this into your sytle sheet for Atom with any theme.
- * Make sure to have JS with JSX syntax
- * Make sure to have HTML with Mustache syntax
- * Step 1. Atom > Settings > Themes > Set UI/Syntax to One Dark
- * Step 2. Atom > Settings > Themes > (Click)  "your stylesheet" -> Paste All of this.
+	 * Thomas Marchi
+	 * Built to highlight everything in JS with JSX syntax, LESS/CSS
+	 * Paste this into your sytle sheet for Atom with any theme.
+	 * Make sure to have JS with JSX syntax
+	 * Make sure to have HTML with Mustache syntax
+	 * Step 1. Atom > Settings > Themes > Set UI/Syntax to One Dark
+	 * Step 2. Atom > Settings > Themes > (Click)  "your stylesheet" -> Paste this file.
  */
 
-// style the background color of the tree view
 .tree-view {
 	background-color: #212121;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.9);
@@ -114,14 +113,14 @@ atom-text-editor .line-number {
 	transition: opacity 0.56s;
 	cursor: pointer;
 }
-// style the background and foreground colors on the atom-text-editor-element itself
+
 atom-text-editor {
 	color: #FAFAFA;
 	background-color: #212121;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.9);
 	font-size: 15px;
 }
-// To style other content in the text editor's shadow DOM, use the ::shadow expression
+
 atom-text-editor .selection .region {
   background-color: rgba(101, 31, 255,0.2);
   color:#fff !important;
@@ -188,6 +187,7 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 	color: #4FC3F7;
 }
 
+.syntax--meta.syntax--function.syntax--body .syntax--variable.syntax--other.syntax--readwrite.syntax--js,
 .syntax--variable.syntax--parameter.syntax--function.syntax--es {
 	color: #80CBC4;
 }
@@ -254,8 +254,7 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 	color: #90CAF9;
 }
 
-.syntax--punctuation.syntax--separator.syntax--key-value.syntax--js,
-.syntax--constant {
+.syntax--punctuation.syntax--separator.syntax--key-value.syntax--js{
 	color: #FFA726;
 }
 
@@ -543,7 +542,9 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 	color: #E0E0E0;
 }
 
-//html
+/*
+	html
+*/
 .syntax--entity.syntax--other.syntax--attribute-name.syntax--html{
 	color: #64FFDA;
 }
@@ -559,4 +560,30 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 .syntax--string.syntax--quoted.syntax--double.syntax--html,
 .syntax--string.syntax--quoted.syntax--single.syntax--html{
 	color:#B388FF;
+}
+
+/*
+	CSS
+*/
+
+.syntax--punctuation.syntax--definition.syntax--comment,
+.syntax--punctuation.syntax--definition.yntax--comment.syntax--css,
+.syntax--comment.syntax--block.syntax--css{
+	color:#26A69A;
+	padding: 5px;
+	border-radius: 3px;
+}
+
+.syntax--support.syntax--type.syntax--property-name.syntax--css{
+	color: #64B5F6;
+}
+.syntax--support.syntax--constant.syntax--property-value.syntax--css{
+	color: #FF4081;
+}
+
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--class.syntax--css{
+	color:#BDBDBD;
+}
+.syntax--punctuation.syntax--definition.syntax--entity.syntax--css{
+	color:#F4511E;
 }
