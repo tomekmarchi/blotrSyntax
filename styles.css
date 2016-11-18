@@ -4,7 +4,8 @@
  * Paste this into your sytle sheet for Atom with any theme.
  * Make sure to have JS with JSX syntax
  * Make sure to have HTML with Mustache syntax
- * Atom > Settings > Themes > (Click)  "your stylesheet" -> Paste All of this.
+ * Step 1. Atom > Settings > Themes > Set UI/Syntax to One Dark
+ * Step 2. Atom > Settings > Themes > (Click)  "your stylesheet" -> Paste All of this.
  */
 
 // style the background color of the tree view
@@ -122,8 +123,9 @@ atom-text-editor {
 }
 // To style other content in the text editor's shadow DOM, use the ::shadow expression
 atom-text-editor .selection .region {
-  background-color: rgba(101, 31, 255,0.4);
+  background-color: rgba(101, 31, 255,0.2);
   color:#fff !important;
+  transition: all 0s;
 }
 
 .file.entry.list-item.status-ignored span[title=".DS_Store"] {
