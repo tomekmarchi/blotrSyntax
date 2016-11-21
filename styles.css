@@ -91,6 +91,18 @@ atom-text-editor .line-number {
 	transition: all 0.62s;
 }
 
+atom-text-editor .line.cursor-line {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+atom-text-editor .line {
+    background-color: #212121;
+}
+
+.tab-bar .tab.active{
+	background-color: #212121 !important;
+}
+
 .tab-bar .tab .close-icon {
 	border-radius: 50%;
 	transition: all 0.62s;
@@ -98,33 +110,46 @@ atom-text-editor .line-number {
 
 .tab-bar .tab::before {
 	box-shadow: none;
-	height: 3px;
+	height: 5px;
 	content: "";
 	position: absolute;
 	pointer-events: none;
 	z-index: 2;
-	top: auto;
+	top: 0px;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	border-radius: 0 !important;
-	background: #651FFF;
+	background: #fff;
 	opacity: 0;
 	transition: opacity 0.56s;
 	cursor: pointer;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
 }
 
+.tab-bar .tab .title{
+	    -webkit-mask: none;
+}
 atom-text-editor {
 	color: #FAFAFA;
 	background-color: #212121;
-	text-shadow: 0 1px 1px rgba(0,0,0,0.9);
+	text-shadow: none;
 	font-size: 15px;
+}
+
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".less"]:before, .icon-file-text[data-name$=".less"]:before, .icon-file-binary[data-name$=".less"]:before, .theme-flatland-dark-ui .icon-file-text[data-name$=".less"]:before, .theme-flatland-dark-ui .icon-book[data-name$=".less"]:before{
+	color: #40C4FF;
+	font-size: 14px;
+	font-weight: normal;
+	text-shadow: 0 1px 2px rgba(0,0,0,1);
 }
 
 atom-text-editor .selection .region {
   background-color: rgba(101, 31, 255,0.2);
   color:#fff !important;
   transition: all 0s;
+  z-index:1;
 }
 
 .file.entry.list-item.status-ignored span[title=".DS_Store"] {
