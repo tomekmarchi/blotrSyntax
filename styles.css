@@ -1,175 +1,48 @@
+
+body atom-workspace{
+	-webkit-font-smoothing: antialiased;
+	text-shadow: 0 1px 0px #000;
+	font-size: 16px !important;
+	font-family:Droid Sans Mono;
+}
+atom-text-editor{
+	font-family:Droid Sans Mono;
+	font-size: 16px !important;
+}
+.tab,.file,.header{
+	cursor: pointer;
+}
+atom-text-editor .gutter .line-number.cursor-line-no-selection{
+  color: rgba(238, 255, 255, 0.9);
+}
+atom-text-editor .gutter {
+    background-color: #263238;
+    color: rgba(238, 255, 255, 0.8);
+}
+
+.tab:hover,.file:hover,.header:hover{
+	color:#03A9F4 !important;
+}
+
+atom-text-editor .line-numbers{
+	border-right:1px solid rgba(0,0,0,0.2);
+}
+
 /*
-	 * Thomas Marchi
-	 * Built to highlight everything in JS with JSX syntax, LESS/CSS
-	 * Paste this into your sytle sheet for Atom with any theme.
-	 * Make sure to have JS with JSX syntax
-	 * Make sure to have HTML with Mustache syntax
-	 * Step 1. Atom > Settings > Themes > Set UI/Syntax to One Dark
-	 * Step 2. Atom > Settings > Themes > (Click)  "your stylesheet" -> Paste this file.
- */
-
-.tree-view {
-	background-color: #212121;
-	text-shadow: 0 1px 1px rgba(0,0,0,0.9);
-	color: #ECEFF1;
-	padding-left: 10px;
-	padding-right: 10px;
-	transition: all 0.62s;
-}
-.list-item{
-	cursor: pointer;
-	transition: all 0.62s;
-}
-.title{
-	text-shadow: 0 1px 1px rgba(0,0,0,0.9);
-	font-weight: bold;
-	text-transform:uppercase;
-}
-.header .icon::before{
-	display: none !important;
+	Finder
+*/
+.list-group li:not(.list-nested-item).status-added, .list-tree li:not(.list-nested-item).status-added, .list-group li.list-nested-item.status-added > .list-item, .list-tree li.list-nested-item.status-added > .list-item {
+    color: #F48FB1;
 }
 
-.tree-view .project-root.project-root:first-child{
-	margin-top: 10px;
-}
-.tree-view .project-root.project-root:first-child,
-.tree-view .project-root.project-root {
-    padding: 0;
-}
-.tree-view .project-root.project-root {
-	background-color: rgba(0,0,0,0.2);
-	margin-bottom: 10px;
-	border-radius: 0 0 3px 3px;
-}
-.list-group li:not(.list-nested-item).status-modified, .list-tree li:not(.list-nested-item).status-modified, .list-group li.list-nested-item.status-modified > .list-item, .list-tree li.list-nested-item.status-modified > .list-item{
-	color: #90CAF9;
+.list-group li:not(.list-nested-item).status-modified, .list-tree li:not(.list-nested-item).status-modified, .list-group li.list-nested-item.status-modified > .list-item, .list-tree li.list-nested-item.status-modified > .list-item {
+    color: #BCAAA4;
 }
 
-.list-group li:not(.list-nested-item).selected.status-modified, .list-tree li:not(.list-nested-item).selected.status-modified, .list-group li.list-nested-item.selected.status-modified > .list-item, .list-tree li.list-nested-item.selected.status-modified > .list-item {
-    color: #e53935;
-}
-
-.list-item:hover{
-	background-color: #424242;
-	color:#fff !important;
-	border-radius: 3px;
-}
-
-atom-text-editor .lines {
-	padding-left: 5px;
-}
-
-.tab-bar .tab {
-	cursor: pointer;
-}
-
-atom-pane-container {
-	padding-top: 0;
-}
-
-.syntax--variable.syntax--language.syntax--this.syntax--es{
-	color: #f44336;
-	font-weight: bold;
-}
-
-atom-text-editor .line-number .icon-right {
-	display: none;
-}
-
-atom-text-editor .line-number {
-	position: relative;
-	white-space: nowrap;
-	padding-left: 10px;
-	padding-right: 10px;
-	opacity: 1;
-	cursor: pointer;
-}
-
-.tab-bar .tab .close-icon,
-.tab-bar .tab .close-icon::before {
-	cursor: pointer;
-	transition: all 0.62s;
-}
-
-atom-text-editor .line.cursor-line {
-    background-color: rgba(255, 255, 255, 0.03);
-}
-
-atom-text-editor .line {
-    background-color: #212121;
-}
-
-.tab-bar .tab.active{
-	background-color: #212121 !important;
-}
-
-.tab-bar .tab .close-icon {
-	border-radius: 50%;
-	transition: all 0.62s;
-}
-
-.tab-bar .tab::before {
-	box-shadow: none;
-	height: 5px;
-	content: "";
-	position: absolute;
-	pointer-events: none;
-	z-index: 2;
-	top: 0px;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	border-radius: 0 !important;
-	background: #fff;
-	opacity: 0;
-	transition: opacity 0.56s;
-	cursor: pointer;
-	border-right: 1px solid black;
-	border-left: 1px solid black;
-}
-
-.tab-bar .tab .title{
-	    -webkit-mask: none;
-}
-atom-text-editor {
-	color: #FAFAFA;
-	background-color: #212121;
-	text-shadow: none;
-	font-size: 15px;
-}
-
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".less"]:before, .icon-file-text[data-name$=".less"]:before, .icon-file-binary[data-name$=".less"]:before, .theme-flatland-dark-ui .icon-file-text[data-name$=".less"]:before, .theme-flatland-dark-ui .icon-book[data-name$=".less"]:before{
-	color: #40C4FF;
-	font-size: 14px;
-	font-weight: normal;
-	text-shadow: 0 1px 2px rgba(0,0,0,1);
-}
-
-atom-text-editor .selection .region {
-  background-color: rgba(101, 31, 255,0.2);
-  color:#fff !important;
-  transition: all 0s;
-  z-index:1;
-}
-
-.file.entry.list-item.status-ignored span[title=".DS_Store"] {
-	display: none;
-}
-
-.header.list-item.project-root-header {
-	cursor: pointer;
-	padding-left: 14px;
-	font-weight: bolder;
-	text-transform: uppercase;
-	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-	background-color: #5C6BC0;
-	color: #fff;
-	margin-bottom: 10px;
-	border-radius: 3px;
-}
+/* js */
 
 .syntax--keyword.syntax--operator.syntax--assignment.syntax--js {
-	color: #AED581;
+	color: #fff;
 }
 
 .syntax--keyword.syntax--operator.syntax--comparison.syntax--js,
@@ -191,30 +64,24 @@ atom-text-editor .selection .region {
 .syntax--punctuation.syntax--section.syntax--embedded.syntax--es6{
 	color:#d50000;
 }
-.syntax--punctuation.syntax--definition.syntax--string.syntax--es6{
-	color:#DD2C00;
-}
 .syntax--punctuation.syntax--definition.syntax--string.syntax--js{
 	color:#f44336;
 }
 .syntax--string{
 	color:#ffcdd2;
 }
+
 .syntax--variable.syntax--other.syntax--property.syntax--js {
 	color: #F48FB1;
 }
 
-span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variable.syntax--other.syntax--readwrite.syntax--js {
-	color: #C5E1A5;
+.syntax--brace.syntax--round.syntax--js ~
+.syntax--variable.syntax--other.syntax--readwrite.syntax--js{
+	color:#61aef9;
 }
 
 .syntax--variable.syntax--other.syntax--readwrite.syntax--js{
-	color: #4FC3F7;
-}
-
-.syntax--meta.syntax--function.syntax--body .syntax--variable.syntax--other.syntax--readwrite.syntax--js,
-.syntax--variable.syntax--parameter.syntax--function.syntax--es {
-	color: #80CBC4;
+	color:	#a179ef;
 }
 
 .syntax--meta.syntax--arguments.syntax--js {
@@ -236,23 +103,15 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 	color: #FF6E40;
 }
 
-.syntax--punctuation.syntax--definition.syntax--function.syntax--begin.syntax--es:not(.syntax--parameters),
-.syntax--punctuation.syntax--section.syntax--group.syntax--begin.syntax--es {
+.syntax--punctuation.syntax--definition.syntax--function.syntax--es:not(.syntax--parameters),
+.syntax--punctuation.syntax--section.syntax--group.syntax--es {
 	color: #ff8a80;
-}
-
-.syntax--punctuation.syntax--definition.syntax--function.syntax--end.syntax--es:not(.syntax--parameters),
-.syntax--punctuation.syntax--section.syntax--group.syntax--end.syntax--es {
 	color: #ff8a80;
 }
 
 .syntax--meta.syntax--brace.syntax--round.syntax--js:not(.syntax--arguments),
-.syntax--punctuation.syntax--definition.syntax--arguments.syntax--begin.syntax--bracket.syntax--round.syntax--js {
+.syntax--punctuation.syntax--definition.syntax--arguments.syntax--bracket.syntax--round.syntax--js {
 	color: #BA68C8;
-}
-
-.syntax--punctuation.syntax--definition.syntax--arguments.syntax--end.syntax--bracket.syntax--round.syntax--js {
-	color: #8E24AA;
 }
 
 .syntax--meta.syntax--brace.syntax--square.syntax--js {
@@ -263,7 +122,7 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 	color: #64B5F6;
 }
 
-.syntax--punctuation.syntax--definition.syntax--function.syntax--body.syntax--begin.syntax--bracket.syntax--curly.syntax--js {
+.syntax--punctuation.syntax--definition.syntax--function.syntax--body.syntax--bracket.syntax--curly.syntax--js {
 	color: #FF4081;
 }
 
@@ -275,12 +134,8 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 	color: #00B0FF;
 }
 
-.syntax--variable {
-	color: #90CAF9;
-}
-
 .syntax--punctuation.syntax--separator.syntax--key-value.syntax--js{
-	color: #FFA726;
+	color: #fff;
 }
 
 .syntax--punctuation.syntax--definition.function-parameters,
@@ -296,276 +151,6 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 	color: #F5F5F5 !important;
 }
 
-.list-group li.list-nested-item.status-ignored > .list-item,
-.list-group li:not(.list-nested-item).status-ignored,
-.list-tree li.list-nested-item.status-ignored > .list-item,
-.list-tree li:not(.list-nested-item).status-ignored {
-	color: #F5F5F5;
-}
-
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$="GULPFILE.js"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$="Gulpfile.js"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$="gulpfile.js"]:before,
-.icon-file-binary[data-name$="GULPFILE.js"]:before,
-.icon-file-binary[data-name$="Gulpfile.js"]:before,
-.icon-file-binary[data-name$="gulpfile.js"]:before,
-.icon-file-text[data-name$="GULPFILE.js"]:before,
-.icon-file-text[data-name$="Gulpfile.js"]:before,
-.icon-file-text[data-name$="gulpfile.js"]:before,
-.theme-flatland-dark-ui .icon-book[data-name$="GULPFILE.js"]:before,
-.theme-flatland-dark-ui .icon-book[data-name$="Gulpfile.js"]:before,
-.theme-flatland-dark-ui .icon-book[data-name$="gulpfile.js"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name$="GULPFILE.js"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name$="Gulpfile.js"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name$="gulpfile.js"]:before {
-	color: #f44336;
-}
-
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name=".npmignore"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name=".npmrc"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="npm-debug.log"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="npm-shrinkwrap.json"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="npmrc"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="package.json"]:before,
-.icon-file-binary[data-name=".npmignore"]:before,
-.icon-file-binary[data-name=".npmrc"]:before,
-.icon-file-binary[data-name="npm-debug.log"]:before,
-.icon-file-binary[data-name="npm-shrinkwrap.json"]:before,
-.icon-file-binary[data-name="npmrc"]:before,
-.icon-file-binary[data-name="package.json"]:before,
-.icon-file-text[data-name=".npmignore"]:before,
-.icon-file-text[data-name=".npmrc"]:before,
-.icon-file-text[data-name="npm-debug.log"]:before,
-.icon-file-text[data-name="npm-shrinkwrap.json"]:before,
-.icon-file-text[data-name="npmrc"]:before,
-.icon-file-text[data-name="package.json"]:before,
-.theme-flatland-dark-ui .icon-book[data-name=".npmignore"]:before,
-.theme-flatland-dark-ui .icon-book[data-name=".npmrc"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="npm-debug.log"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="npm-shrinkwrap.json"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="npmrc"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="package.json"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name=".npmignore"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name=".npmrc"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="npm-debug.log"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="npm-shrinkwrap.json"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="npmrc"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="package.json"]:before {
-	color: #b71c1c;
-}
-
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".gitattributes"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".gitconfig"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".gitignore"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".gitignore_global"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".gitkeep"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".gitmodules"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".keep"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name=".mailmap"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name^=".git"]:before,
-.icon-file-binary[data-name$=".gitattributes"]:before,
-.icon-file-binary[data-name$=".gitconfig"]:before,
-.icon-file-binary[data-name$=".gitignore"]:before,
-.icon-file-binary[data-name$=".gitignore_global"]:before,
-.icon-file-binary[data-name$=".gitkeep"]:before,
-.icon-file-binary[data-name$=".gitmodules"]:before,
-.icon-file-binary[data-name$=".keep"]:before,
-.icon-file-binary[data-name=".mailmap"]:before,
-.icon-file-binary[data-name^=".git"]:before,
-.icon-file-text[data-name$=".gitattributes"]:before,
-.icon-file-text[data-name$=".gitconfig"]:before,
-.icon-file-text[data-name$=".gitignore"]:before,
-.icon-file-text[data-name$=".gitignore_global"]:before,
-.icon-file-text[data-name$=".gitkeep"]:before,
-.icon-file-text[data-name$=".gitmodules"]:before,
-.icon-file-text[data-name$=".keep"]:before,
-.icon-file-text[data-name=".mailmap"]:before,
-.icon-file-text[data-name^=".git"]:before,
-.theme-flatland-dark-ui .icon-book[data-name$=".gitattributes"]:before,
-.theme-flatland-dark-ui .icon-book[data-name$=".gitconfig"]:before,
-.theme-flatland-dark-ui .icon-book[data-name$=".gitignore"]:before,
-.theme-flatland-dark-ui .icon-book[data-name$=".gitignore_global"]:before,
-.theme-flatland-dark-ui .icon-book[data-name$=".gitkeep"]:before,
-.theme-flatland-dark-ui .icon-book[data-name$=".gitmodules"]:before,
-.theme-flatland-dark-ui .icon-book[data-name$=".keep"]:before,
-.theme-flatland-dark-ui .icon-book[data-name=".mailmap"]:before,
-.theme-flatland-dark-ui .icon-book[data-name^=".git"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name$=".gitattributes"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name$=".gitconfig"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name$=".gitignore"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name$=".gitignore_global"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name$=".gitkeep"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name$=".gitmodules"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name$=".keep"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name=".mailmap"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name^=".git"]:before {
-	color: #d32f2f;
-}
-
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".1ST"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".1st"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".README"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".ReadMe"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".readme"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="AUTHORS"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="CHANGELOG"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="CONTRIBUTING"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="CONTRIBUTORS"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="COPYING"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="ChangeLog"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="Contributors"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="HISTORY"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="INSTALL"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="LICENCE"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="LICENCES"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="LICENSE"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="LICENSES"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="MIT-LICENSE"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="NEWS"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="PROJECTS"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="README.md"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="Read.me"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="Readme.md"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="THANKS"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="changelog"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="read.me"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name="readme.md"]:before,
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name^="ChangeLog."]:before,
-.icon-file-binary[data-name$=".1ST"]:before,
-.icon-file-binary[data-name$=".1st"]:before,
-.icon-file-binary[data-name$=".README"]:before,
-.icon-file-binary[data-name$=".ReadMe"]:before,
-.icon-file-binary[data-name$=".readme"]:before,
-.icon-file-binary[data-name="AUTHORS"]:before,
-.icon-file-binary[data-name="CHANGELOG"]:before,
-.icon-file-binary[data-name="CONTRIBUTING"]:before,
-.icon-file-binary[data-name="CONTRIBUTORS"]:before,
-.icon-file-binary[data-name="COPYING"]:before,
-.icon-file-binary[data-name="ChangeLog"]:before,
-.icon-file-binary[data-name="Contributors"]:before,
-.icon-file-binary[data-name="HISTORY"]:before,
-.icon-file-binary[data-name="INSTALL"]:before,
-.icon-file-binary[data-name="LICENCE"]:before,
-.icon-file-binary[data-name="LICENCES"]:before,
-.icon-file-binary[data-name="LICENSE"]:before,
-.icon-file-binary[data-name="LICENSES"]:before,
-.icon-file-binary[data-name="MIT-LICENSE"]:before,
-.icon-file-binary[data-name="NEWS"]:before,
-.icon-file-binary[data-name="PROJECTS"]:before,
-.icon-file-binary[data-name="README.md"]:before,
-.icon-file-binary[data-name="Read.me"]:before,
-.icon-file-binary[data-name="Readme.md"]:before,
-.icon-file-binary[data-name="THANKS"]:before,
-.icon-file-binary[data-name="changelog"]:before,
-.icon-file-binary[data-name="read.me"]:before,
-.icon-file-binary[data-name="readme.md"]:before,
-.icon-file-binary[data-name^="ChangeLog."]:before,
-.icon-file-text[data-name$=".1ST"]:before,
-.icon-file-text[data-name$=".1st"]:before,
-.icon-file-text[data-name$=".README"]:before,
-.icon-file-text[data-name$=".ReadMe"]:before,
-.icon-file-text[data-name$=".readme"]:before,
-.icon-file-text[data-name="AUTHORS"]:before,
-.icon-file-text[data-name="CHANGELOG"]:before,
-.icon-file-text[data-name="CONTRIBUTING"]:before,
-.icon-file-text[data-name="CONTRIBUTORS"]:before,
-.icon-file-text[data-name="COPYING"]:before,
-.icon-file-text[data-name="ChangeLog"]:before,
-.icon-file-text[data-name="Contributors"]:before,
-.icon-file-text[data-name="HISTORY"]:before,
-.icon-file-text[data-name="INSTALL"]:before,
-.icon-file-text[data-name="LICENCE"]:before,
-.icon-file-text[data-name="LICENCES"]:before,
-.icon-file-text[data-name="LICENSE"]:before,
-.icon-file-text[data-name="LICENSES"]:before,
-.icon-file-text[data-name="MIT-LICENSE"]:before,
-.icon-file-text[data-name="NEWS"]:before,
-.icon-file-text[data-name="PROJECTS"]:before,
-.icon-file-text[data-name="README.md"]:before,
-.icon-file-text[data-name="Read.me"]:before,
-.icon-file-text[data-name="Readme.md"]:before,
-.icon-file-text[data-name="THANKS"]:before,
-.icon-file-text[data-name="changelog"]:before,
-.icon-file-text[data-name="read.me"]:before,
-.icon-file-text[data-name="readme.md"]:before,
-.icon-file-text[data-name^="ChangeLog."]:before,
-.theme-flatland-dark-ui .icon-book[data-name$=".1ST"]:before,
-.theme-flatland-dark-ui .icon-book[data-name$=".1st"]:before,
-.theme-flatland-dark-ui .icon-book[data-name$=".README"]:before,
-.theme-flatland-dark-ui .icon-book[data-name$=".ReadMe"]:before,
-.theme-flatland-dark-ui .icon-book[data-name$=".readme"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="AUTHORS"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="CHANGELOG"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="CONTRIBUTING"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="CONTRIBUTORS"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="COPYING"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="ChangeLog"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="Contributors"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="HISTORY"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="INSTALL"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="LICENCE"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="LICENCES"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="LICENSE"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="LICENSES"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="MIT-LICENSE"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="NEWS"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="PROJECTS"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="README.md"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="Read.me"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="Readme.md"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="THANKS"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="changelog"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="read.me"]:before,
-.theme-flatland-dark-ui .icon-book[data-name="readme.md"]:before,
-.theme-flatland-dark-ui .icon-book[data-name^="ChangeLog."]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name$=".1ST"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name$=".1st"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name$=".README"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name$=".ReadMe"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name$=".readme"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="AUTHORS"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="CHANGELOG"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="CONTRIBUTING"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="CONTRIBUTORS"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="COPYING"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="ChangeLog"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="Contributors"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="HISTORY"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="INSTALL"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="LICENCE"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="LICENCES"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="LICENSE"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="LICENSES"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="MIT-LICENSE"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="NEWS"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="PROJECTS"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="README.md"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="Read.me"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="Readme.md"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="THANKS"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="changelog"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="read.me"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name="readme.md"]:before,
-.theme-flatland-dark-ui .icon-file-text[data-name^="ChangeLog."]:before {
-	color: #80D8FF;
-}
-
-.icon-book[data-name="README.md"]:before,
-.icon-book[data-name="Readme.md"]:before,
-.icon-book[data-name="readme.md"]:before {
-	color: #40C4FF;
-}
-
-.icon-file-directory[data-name="node_modules"]:before {
-	color: #76FF03;
-}
-
-.list-group li.list-nested-item > .list-item,
-.list-group li:not(.list-nested-item),
-.list-tree li.list-nested-item > .list-item,
-.list-tree li:not(.list-nested-item) {
-	color: #E0E0E0;
-}
 
 /*
 	html
@@ -602,6 +187,7 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 .syntax--support.syntax--type.syntax--property-name.syntax--css{
 	color: #64B5F6;
 }
+
 .syntax--support.syntax--constant.syntax--property-value.syntax--css{
 	color: #FF4081;
 }
@@ -611,4 +197,8 @@ span.syntax--meta.syntax--brace.syntax--square.syntax--js ~ span.syntax--variabl
 }
 .syntax--punctuation.syntax--definition.syntax--entity.syntax--css{
 	color:#F4511E;
+}
+
+.syntax--invalid.syntax--illegal {
+  background-color: transparent !important;
 }
