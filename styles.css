@@ -1,3 +1,47 @@
+.sb-table.linter td:nth-child(4), .sb-table.linter td:nth-child(5) {
+    white-space: pre-wrap;
+    cursor: pointer;
+    word-break: break-word;
+}
+
+atom-text-editor.editor .linter-highlight.linter-error.linter-gutter, .linter-highlight.linter-error.linter-gutter {
+  background-color: #f15d55;
+  color: #f15d55;
+  display: block;
+  border-radius: 0px;
+  height: 24px;
+  text-shadow: none;
+}
+
+.sb-table.linter td {
+  min-width: 50px;
+  color: #fff;
+  font-size: 14px;
+  text-shadow: 0 1px 0 #000;
+  box-shadow: 1px 0 0 #000;
+}
+
+.sb-table.linter td:first-child {
+  display: none;
+}
+
+.sb-table.linter td:nth-child(2) {
+  display: none;
+}
+
+.sb-table.linter td:nth-child(4) {
+  min-width: 80px;
+  text-align: center;
+}
+
+.sb-table.linter td:nth-child(5) {
+  display: none;
+}
+
+.sb-table.linter thead {
+    display: none;
+}
+
 body atom-workspace {
   -webkit-font-smoothing: antialiased;
   text-shadow: 0 1px 0 #000;
@@ -52,6 +96,11 @@ status-bar a:hover {
 
 .status-bar .linter-status-count a:last-child {
   color: #B39DDB;
+}
+
+.status-bar .github-StatusBarTileController a{
+  color: #ff5252;
+  cursor: pointer !important;
 }
 
 atom-text-editor.editor {
