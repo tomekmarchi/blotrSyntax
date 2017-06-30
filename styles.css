@@ -153,6 +153,22 @@ atom-text-editor .line-numbers {
 
 /* js */
 
+.syntax--storage.syntax--modifier.syntax--js{
+  color: #e53935;
+}
+
+.syntax--meta.syntax--brace.syntax--curly.syntax--js{
+  color:#ffd83f;
+}
+
+.syntax--constant.syntax--numeric.syntax--decimal.syntax--js{
+  color: #ffd4d7;
+}
+
+.syntax--js .syntax--constant {
+  color: #bfafd1;
+}
+
 .syntax--keyword.syntax--operator.syntax--assignment.syntax--js {
   color: #fff;
 }
@@ -162,7 +178,7 @@ atom-text-editor .line-numbers {
 }
 
 .syntax--storage.syntax--type.syntax--js {
-  color: #1DE9B6;
+  color: #7ecfe7;
 }
 
 .syntax--keyword.syntax--operator.syntax--new.syntax--es {
@@ -186,7 +202,7 @@ atom-text-editor .line-numbers {
 }
 
 .syntax--variable.syntax--other.syntax--property.syntax--js {
-  color: #F48FB1;
+  color: #00ffe4;
 }
 
 .syntax--brace.syntax--round.syntax--js~.syntax--variable.syntax--other.syntax--readwrite.syntax--js {
