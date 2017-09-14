@@ -1,3 +1,8 @@
+.nuclide-ui-toolbar{
+  height: 2em;
+  line-height: 2em;
+}
+
 .sb-table.linter td:nth-child(4), .sb-table.linter td:nth-child(5) {
     white-space: pre-wrap;
     cursor: pointer;
@@ -11,6 +16,22 @@ atom-text-editor.editor .linter-highlight.linter-error.linter-gutter, .linter-hi
   border-radius: 0px;
   height: 24px;
   text-shadow: none;
+}
+
+.highlights {
+  z-index: 2;
+  position: relative;
+  opacity: 0.2;
+  border-radius: 2px;
+}
+
+atom-text-editor .selection .region {
+  background-color: rgb(78, 227, 255);
+}
+
+atom-text-editor .line {
+  background-color: rgb(40, 44, 52);
+  z-index: 1;
 }
 
 .sb-table.linter td {
@@ -47,14 +68,21 @@ body atom-workspace {
   text-shadow: 0 1px 0 #000;
   font-size: 16px !important;
 }
-
+body .footer {
+  overflow: hidden;
+}
 body .status-bar {
-  font-size: 16px;
+  font-size: 15px;
   text-shadow: 0 1px 0 #000;
   background-color: #424242;
   color: #fff;
   font-weight: bold;
-  letter-spacing: 1px;
+  height: 25px;
+  line-height: 25px;
+}
+.github-StatusBarTileController,
+.status-bar .inline-block {
+  height: 25px;
 }
 
 status-bar a {
