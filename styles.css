@@ -9,6 +9,12 @@
     word-break: break-word;
 }
 
+atom-text-editor .bracket-matcher .region {
+    opacity: 1;
+    border-bottom: 3px solid #79d9e9;
+    box-sizing: border-box;
+}
+
 atom-text-editor.editor .linter-highlight.linter-error.linter-gutter, .linter-highlight.linter-error.linter-gutter {
   background-color: #f15d55;
   color: #f15d55;
